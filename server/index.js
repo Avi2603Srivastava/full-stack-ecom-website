@@ -27,7 +27,7 @@ app.use(cors(corsOptions))
 app.use(express.json())       
               //used to parse incomming json data
               
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 
 app.use("/public", express.static("public"))//used to server public files like uploaded images
 app.use(express.static(path.join(__dirname, 'build')))
