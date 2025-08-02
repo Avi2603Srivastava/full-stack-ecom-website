@@ -30,7 +30,9 @@ app.use(express.json())
 // app.use(express.urlencoded({ extended: true }));
 
 // app.use("/public", express.static("public"))//used to server public files like uploaded images
-app.use("/uploads", express.static(path.join(__dirname, "public/uploads")))
+// app.use("/uploads", express.static(path.join(__dirname, "public/uploads")))
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+
 app.use(express.static(path.join(__dirname, 'build')))
 
 app.use("/api",Router)
